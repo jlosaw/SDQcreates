@@ -1,8 +1,13 @@
 // This one is the little blue LED on your board. On the Photon it is next to D7.
-// Having declared these variables, let's move on to the setup function.
+
+// First, we're going to make some variables.
+// This is our "shorthand" that we'll use throughout the program:
+
+int led = D7; // Instead of writing D0 over and over again, we'll write led1
+// You'll need to wire an LED to this one to see it blink.
+
 // The setup function is a standard part of any microcontroller program.
 // It runs only once when the device boots up or is reset.
-
 
 void setup() {
   // We are going to tell our device that D7 (which we named led) is going to be an output
@@ -22,3 +27,11 @@ void loop() {
 
   // We'll leave it on for 1 second...
   delay(1000);
+  
+   // Then we'll turn it off...
+  digitalWrite(led, LOW);
+  
+  // Wait 1 second...
+  delay(1000);
+  // And repeat!
+}
