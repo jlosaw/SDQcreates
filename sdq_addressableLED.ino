@@ -34,7 +34,7 @@ void rainbow(uint8_t wait);
 SYSTEM_MODE(AUTOMATIC);
 
 // IMPORTANT: Set pixel COUNT, PIN and TYPE
-#define PIXEL_PIN D6
+#define PIXEL_PIN D5
 #define PIXEL_COUNT 5
 #define PIXEL_TYPE WS2812       //2812 is fine for ours, but if you use a different brand you need to look this up in the library file
 #define BRIGHTNESS 50           // 0 - 255 (note, these are super bright, so lower is fine for the bench)
