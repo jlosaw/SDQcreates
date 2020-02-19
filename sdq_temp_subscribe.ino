@@ -2,6 +2,7 @@
 #include <neopixel.h>
 
 
+
 // -----------------------------------------
 // Particle Subscribe
 // -----------------------------------------
@@ -21,7 +22,7 @@ uint32_t Wheel(byte WheelPos);
 
 void setup() {
 
-    Particle.subscribe("JLO_Temp", tempHandler);
+    Particle.subscribe("JLOGH_Temp", tempHandler);
     // This is the event that we are subscribing too. It must correspond to the event name from temp sensor
     strip.setBrightness(BRIGHTNESS);
     strip.begin();
@@ -43,7 +44,7 @@ void tempHandler(const char *event, const char *data)
   
   if (strcmp(data,"60")==0) {
     strip.setPixelColor(0, 0,0,255);
-    strip.setPixelColor(1, 0,85,255);
+    strip.setPixelColor(1, 0,50,255);
     strip.setPixelColor(2, 0,0,0);
     strip.setPixelColor(3, 0,0,0);
     strip.setPixelColor(4, 0,0,0);
@@ -54,9 +55,9 @@ void tempHandler(const char *event, const char *data)
 
   else if (strcmp(data,"70")==0) {
     strip.setPixelColor(0, 0,0,255);
-    strip.setPixelColor(1, 0,85,255);
-    strip.setPixelColor(2, 0,127,180);
-    strip.setPixelColor(3, 0,170,90);
+    strip.setPixelColor(1, 0,50,255);
+    strip.setPixelColor(2, 0,255,0);
+    strip.setPixelColor(3, 150,150,0);
     strip.setPixelColor(4, 0,0,0);
       
     strip.show();
@@ -65,10 +66,10 @@ void tempHandler(const char *event, const char *data)
   
   else if (strcmp(data,"80")==0) {
     strip.setPixelColor(0, 0,0,255);
-    strip.setPixelColor(1, 0,85,255);
-    strip.setPixelColor(2, 0,127,180);
-    strip.setPixelColor(3, 0,170,90);
-    strip.setPixelColor(4, 0,255,0);
+    strip.setPixelColor(1, 0,50,255);
+    strip.setPixelColor(2, 0,255,0);
+    strip.setPixelColor(3, 255,255,0);
+    strip.setPixelColor(4, 255,150,0);
     
    /* strip.setPixelColor(5, 43,255,0);
     strip.setPixelColor(6, 85,213,0);
