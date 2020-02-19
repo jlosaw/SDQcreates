@@ -1,0 +1,10 @@
+Add this inside of the setup loop to set credetials manually
+
+ WiFi.on();
+ WiFi.disconnect();
+ WiFi.setCredentials("this is the name of the hotspot", "hotspot password");
+ //if using WPA2 then use the line below instead and "//" the line above
+ // WiFi.setCredentials("Network ID", "password", WPA2, WLAN_CIPHER_AES);
+  WiFi.connect();
+  waitUntil(WiFi.ready);
+  Particle.connect();
