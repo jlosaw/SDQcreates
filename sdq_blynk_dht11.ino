@@ -10,7 +10,7 @@
 
 // You should get Auth Token in the Blynk App.
 // Go to the Project Settings (nut icon).
-char auth[] = "2fd02368df2749cbabafb6053834d03f";
+char auth[] = "2fd02368df2749cbabafb6053834d03f";	//change the code between the "'s to your Blynk device code
 
 //DHT Setup
 
@@ -38,7 +38,7 @@ void loop()
     Blynk.run();
     
     	float h = dht.getHumidity();
-    	float f = dht.getTempFarenheit();
+    	float c = dht.getTempCelcius();
     	
     	// Check if any reads failed and exit early (to try again).
 	if (isnan(h)  || isnan(f)) {
@@ -48,7 +48,7 @@ void loop()
 
 
 Blynk.virtualWrite(V3, h);
-Blynk.virtualWrite(V4, f);
+Blynk.virtualWrite(V4, c);
 
     	
 }
